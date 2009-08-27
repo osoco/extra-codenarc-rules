@@ -1,13 +1,18 @@
+/*
+ * Copyright 2009, Osoco. All Rights Reserved.
+ */
 package es.osoco.codenarc.rules
 
-/**
- *
- * @author gcrick
- */
+
 import org.codenarc.rule.AbstractRule
 import org.codenarc.rule.Violation
 import org.codenarc.source.SourceCode
 
+/**
+ * Checks that each class starts with a copyright notice.
+ *
+ * @author <a href="mailto:geli.crick@osoco.es">Geli Crick</a>
+ */
 class CopyrightComment extends AbstractRule
 {
     String name = 'CopyrightComment'

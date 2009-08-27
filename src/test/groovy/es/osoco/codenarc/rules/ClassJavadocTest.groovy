@@ -14,8 +14,6 @@ import org.codenarc.source.SourceFile
  */
 public class ClassJavadocTest extends GroovyTestCase
 {
-    
-
     protected void setUp() throws Exception
     {
         super.setUp();
@@ -31,7 +29,8 @@ public class ClassJavadocTest extends GroovyTestCase
      */
     public void testPass()
     {
-        def testFile = this.getClass().getClassLoader().getResource("pass.test")
+        def testFile = this.getClass().getClassLoader()
+            .getResource("ClassJavadocPass.txt")
         SourceCode source = new SourceFile(new File(testFile.toURI()))
         def violations = []
 
@@ -46,7 +45,8 @@ public class ClassJavadocTest extends GroovyTestCase
      */
     public void testFail()
     {
-        def testFile = this.getClass().getClassLoader().getResource("fail.test")
+        def testFile = this.getClass().getClassLoader()
+            .getResource("ClassJavadocFail.txt")
         SourceCode source = new SourceFile(new File(testFile.toURI()))
         def violations = []
 

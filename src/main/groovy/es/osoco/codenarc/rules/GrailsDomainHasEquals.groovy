@@ -1,3 +1,6 @@
+/*
+ * Copyright 2009, Osoco. All Rights Reserved.
+ */
 package es.osoco.codenarc.rules
 
 import org.codehaus.groovy.ast.ClassNode
@@ -5,21 +8,22 @@ import org.codenarc.rule.AbstractAstVisitor
 import org.codenarc.rule.AbstractAstVisitorRule
 
 /**
+ * Checks that Grails domain classes redefine equals()
  *
- * @author gcrick
+ * @author <a href="mailto:geli.crick@osoco.es">Geli Crick</a>
  */
-
-
-class GrailsDomainHasEquals extends AbstractAstVisitorRule {
+class GrailsDomainHasEquals extends AbstractAstVisitorRule
+{
     String name = 'GrailsDomainHasEquals'
     int priority = 2
     Class astVisitorClass = GrailsDomainHasEqualsAstVisitor
     String applyToFilesMatching = /.*grails-app\/domain\/.*/
 }
 
-class GrailsDomainHasEqualsAstVisitor extends AbstractAstVisitor {
-
-    void visitClass(ClassNode classNode) {
+class GrailsDomainHasEqualsAstVisitor extends AbstractAstVisitor
+{
+    void visitClass(ClassNode classNode)
+    {
         def methods = classNode.methods
         def equalsMethod = methods.find { m ->
             m.name == 'equals' &&

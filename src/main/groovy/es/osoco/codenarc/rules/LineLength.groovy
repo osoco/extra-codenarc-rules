@@ -1,3 +1,6 @@
+/*
+ * Copyright 2009, Osoco. All Rights Reserved.
+ */
 package es.osoco.codenarc.rules
 
 /**
@@ -5,7 +8,7 @@ package es.osoco.codenarc.rules
  * It checks for number of characters, so lines that include tabs may appear
  * longer than the allowed number when viewing the file.
  *
- * @author gcrick
+ * @author <a href="mailto:geli.crick@osoco.es">Geli Crick</a>
  */
 import org.codenarc.rule.AbstractRule
 import org.codenarc.rule.Violation
