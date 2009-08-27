@@ -1,0 +1,25 @@
+
+/**
+ * Comment
+ */
+class First{
+    def x
+
+    First(){}
+
+    void method1(){}
+}
+
+public class Second{
+    public Second(){
+    }
+
+    private int method2(){
+        return 2
+    }
+}
+
+public interface Third{
+    public static final Y
+
+}
