@@ -17,7 +17,7 @@ import org.codehaus.groovy.ast.MethodNode
 class BracesForMethod extends AbstractAstVisitorRule
 {
     String name = 'BracesForMethod'
-    int priority = 2
+    int priority = 3
     Class astVisitorClass = BracesForMethodAstVisitor
     boolean sameLine = false
 }

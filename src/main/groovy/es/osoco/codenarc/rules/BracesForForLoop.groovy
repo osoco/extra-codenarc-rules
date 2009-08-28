@@ -18,7 +18,7 @@ import org.codehaus.groovy.ast.stmt.ForStatement
 class BracesForForLoop extends AbstractAstVisitorRule
 {
     String name = 'BracesForForLoop'
-    int priority = 2
+    int priority = 3
     Class astVisitorClass = BracesForForLoopAstVisitor
     boolean sameLine = false
 }

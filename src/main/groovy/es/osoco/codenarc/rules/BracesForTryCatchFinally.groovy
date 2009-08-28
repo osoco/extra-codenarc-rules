@@ -20,7 +20,7 @@ import org.codehaus.groovy.ast.stmt.TryCatchStatement
 class BracesForTryCatchFinally extends AbstractAstVisitorRule
 {
     String name = 'BracesForTryCatchFinally'
-    int priority = 2
+    int priority = 3
     Class astVisitorClass = BracesForTryCatchFinallyAstVisitor
     boolean sameLine = false
 }

@@ -20,7 +20,7 @@ import org.codehaus.groovy.ast.stmt.IfStatement
 class BracesForIfElse extends AbstractAstVisitorRule
 {
     String name = 'BracesForIf'
-    int priority = 2
+    int priority = 3
     Class astVisitorClass = BracesForIfElseAstVisitor
     boolean sameLine = false
 }

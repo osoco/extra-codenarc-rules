@@ -17,7 +17,7 @@ import org.codenarc.rule.AbstractAstVisitorRule
 class BracesForClass extends AbstractAstVisitorRule
 {
     String name = 'BracesForClass'
-    int priority = 2
+    int priority = 3
     Class astVisitorClass = BracesForClassAstVisitor
     boolean sameLine = false
 }

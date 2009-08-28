@@ -15,7 +15,7 @@ import org.codenarc.rule.AbstractAstVisitorRule
 class GrailsDomainHasToString extends AbstractAstVisitorRule
 {
     String name = 'GrailsDomainHasToString'
-    int priority = 2
+    int priority = 3
     Class astVisitorClass = GrailsDomainHasToStringAstVisitor
     String applyToFilesMatching = /.*grails-app\/domain\/.*/
 }
