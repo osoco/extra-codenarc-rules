@@ -5,7 +5,7 @@
     <groupId>es.osoco</groupId>
     <artifactId>codenarc-rules</artifactId>
     <packaging>jar</packaging>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <name>codenarc-rules</name>
     <description>Extra rules for Codenarc</description>
 
@@ -58,5 +58,15 @@
             </plugins>
         </pluginManagement>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>osoco.repo</id>
+            <url>http://archiva.osoco.es/archiva/repository/internal</url>
+        </repository>
+        <snapshotRepository>
+            <id>osoco.repo</id>
+            <url>http://archiva.osoco.es/archiva/repository/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
 
