@@ -19,7 +19,7 @@ import org.codehaus.groovy.ast.stmt.IfStatement
  */
 class BracesForIfElse extends AbstractAstVisitorRule
 {
-    String name = 'BracesForIf'
+    String name = 'BracesForIfElse'
     int priority = 3
     Class astVisitorClass = BracesForIfElseAstVisitor
     boolean sameLine = false
@@ -30,21 +30,25 @@ class BracesForIfElseAstVisitor extends AbstractAstVisitor
     //TODO check else statements
     void visitIfElse(IfStatement node)
     {
-        if (rule.sameLine)
-        {
-            if(!sourceLine(node)?.contains("{"))
+        if (isFirstVisit(node)) {
+            if (rule.sameLine)
             {
-                addViolation(node, "Braces should start on the same line")
+                if(!sourceLine(node)?.contains("{"))
+                {
+                    addViolation(node, "Braces should start on the same line")
+                }
             }
-        }
-        else
-        {
-            if(sourceLine(node)?.contains("{"))
+            else
             {
-                addViolation(node, "Braces should start on a new line")
+                if(sourceLine(node)?.contains("{"))
+                {
+                    addViolation(node, "Braces should start on a new line")
+                }
             }
         }
         super.visitIfElse(node)
     }
+
+
 }
 

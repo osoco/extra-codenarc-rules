@@ -22,7 +22,7 @@ class GrailsDomainHasEquals extends AbstractAstVisitorRule
 
 class GrailsDomainHasEqualsAstVisitor extends AbstractAstVisitor
 {
-    void visitClass(ClassNode classNode)
+    void visitClassComplete(ClassNode classNode)
     {
         def methods = classNode.methods
         def equalsMethod = methods.find { m ->
@@ -34,7 +34,6 @@ class GrailsDomainHasEqualsAstVisitor extends AbstractAstVisitor
         if (!equalsMethod) {
             addViolation(classNode)
         }
-        super.visitClass(classNode)
     }
 }
 

@@ -3,11 +3,19 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>es.osoco</groupId>
-    <artifactId>codenarc-rules</artifactId>
+    <artifactId>extra-codenarc-rules</artifactId>
     <packaging>jar</packaging>
-    <version>0.2-SNAPSHOT</version>
-    <name>codenarc-rules</name>
+    <version>0.2</version>
+    <name>extra-codenarc-rules</name>
     <description>Extra rules for Codenarc</description>
+
+    <licenses>
+      <license>
+        <name>The Apache Software License, Version 2.0</name>
+        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url> 
+        <distribution>repo</distribution>
+      </license>
+    </licenses>
 
     <dependencies>
         <dependency>
@@ -19,7 +27,7 @@
         <dependency>
             <groupId>org.codenarc</groupId>
             <artifactId>CodeNarc</artifactId>
-            <version>0.6</version>
+            <version>0.13</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -30,7 +38,7 @@
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
-            <version>1.6-beta-2</version>
+            <version>1.7.5</version>
         </dependency>
     </dependencies>
 

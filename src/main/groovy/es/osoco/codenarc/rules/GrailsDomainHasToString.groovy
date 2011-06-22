@@ -23,7 +23,7 @@ class GrailsDomainHasToString extends AbstractAstVisitorRule
 class GrailsDomainHasToStringAstVisitor extends AbstractAstVisitor
 {
 
-    void visitClass(ClassNode classNode)
+    void visitClassComplete(ClassNode classNode)
     {
         def methods = classNode.methods
         def toStringMethod = methods.find { m ->
@@ -35,7 +35,6 @@ class GrailsDomainHasToStringAstVisitor extends AbstractAstVisitor
         {
             addViolation(classNode)
         }
-        super.visitClass(classNode)
     }
 }
 

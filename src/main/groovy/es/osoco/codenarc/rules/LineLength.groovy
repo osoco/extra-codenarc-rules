@@ -34,9 +34,7 @@ class LineLength extends AbstractRule
             lineNumber++
             if (line.length() > length)
             {
-                violations.add(new Violation(rule:this,
-                    lineNumber:lineNumber, sourceLine:line,
-                    message:"The line exceeds $length characters"))
+                violations << createViolation(lineNumber, line, "The line exceeds $length characters")
             }
         }
     }

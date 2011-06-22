@@ -25,7 +25,7 @@ class BracesForMethod extends AbstractAstVisitorRule
 class BracesForMethodAstVisitor extends AbstractAstVisitor
 {
 
-    void visitConstructorOrMethod(MethodNode node, boolean isConstructor)
+    void visitConstructorOrMethodEx(MethodNode node, boolean isConstructor)
     {
         if (rule.sameLine)
         {
@@ -41,7 +41,6 @@ class BracesForMethodAstVisitor extends AbstractAstVisitor
                 addViolation(node, "Braces should start on a new line")
             }
         }
-        super.visitConstructorOrMethod(node, isConstructor)
     }
 }
 

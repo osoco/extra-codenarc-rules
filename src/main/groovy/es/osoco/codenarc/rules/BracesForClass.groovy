@@ -24,7 +24,7 @@ class BracesForClass extends AbstractAstVisitorRule
 
 class BracesForClassAstVisitor extends AbstractAstVisitor
 {
-    void visitClass(ClassNode node)
+    void visitClassComplete(ClassNode node)
     {
         if (rule.sameLine)
         {
@@ -40,6 +40,5 @@ class BracesForClassAstVisitor extends AbstractAstVisitor
                 addViolation(node, "Braces should start on a new line")
             }
         }
-        super.visitClass(node)
     }
 }
