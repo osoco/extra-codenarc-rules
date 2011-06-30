@@ -66,15 +66,5 @@
             </plugins>
         </pluginManagement>
     </build>
-    <distributionManagement>
-        <repository>
-            <id>osoco.repo</id>
-            <url>http://archiva.osoco.es/archiva/repository/internal</url>
-        </repository>
-        <snapshotRepository>
-            <id>osoco.repo</id>
-            <url>http://archiva.osoco.es/archiva/repository/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
 
